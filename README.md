@@ -1,27 +1,126 @@
-# MiniProjet
+# Task Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+## Overview
 
-## Development server
+This is a simple Task Management Application built with Angular, designed to help users create, track, and manage their tasks efficiently. The application provides features like user registration, task creation, filtering, and basic task management.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- User Registration
+- Create, Edit, and Delete Tasks
+- Task Filtering by Category and Priority
+- Responsive Design
+- Simple and Intuitive Interface
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- Angular
+- TypeScript
+- RxJS
+- Tailwind CSS
+- Angular Reactive Forms
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Prerequisites
 
-## Running unit tests
+Before you begin, ensure you have met the following requirements:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Node.js (version 16.x or later)
+- npm (version 8.x or later)
+- Angular CLI (version 14.x or later)
 
-## Running end-to-end tests
+## Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/task-management-app.git
+cd task-management-app
+```
 
-## Further help
+2. Install dependencies
+```bash
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Run the development server
+```bash
+ng serve
+```
+
+4. Open your browser and navigate to `http://localhost:4200`
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── signup/
+│   │   ├── task-list/
+│   │   └── task-modal/
+│   ├── services/
+│   │   ├── user.service.ts
+│   │   ├── task.service.ts
+│   │   ├── category.service.ts
+│   │   └── priority.service.ts
+│   ├── guards/
+│   │   └── auth.guard.ts
+│   └── models/
+│       ├── user.model.ts
+│       ├── task.model.ts
+│       └── ...
+├── environments/
+│   ├── environment.ts
+│   └── environment.prod.ts
+└── ...
+```
+
+## Authentication
+
+The application uses a simple local storage-based authentication mechanism. Users can sign up and are automatically logged in, with routes protected by an AuthGuard.
+
+## API Integration
+
+The application integrates with a backend API for:
+- User registration
+- Task CRUD operations
+- Category and Priority management
+
+## Deployment
+
+To build the project for production:
+```bash
+ng build --configuration=production
+```
+
+## Screenshots
+
+### 1. Sign Up Page
+![Sign Up Page](/screenshots/signup.png)
+
+### 2. Task List Overview
+![Task List](/screenshots/task-list.png)
+
+### 3. Create New Task Modal
+![Create Task](/screenshots/create-task.png)
+
+### 4. Edit Task Modal
+![Edit Task](/screenshots/edit-task.png)
+
+### 5. Task Filtering
+![Task Filtering](/screenshots/task-filter.png)
+
+### 6. Responsive Mobile View
+![Mobile View](/screenshots/mobile-view.png)
+
+### 7. Task Priority Visualization
+![Priority View](/screenshots/priority-view.png)
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Your Name - your.email@example.com
+
+Project Link: [https://github.com/yourusername/task-management-app](https://github.com/yourusername/task-management-app)
